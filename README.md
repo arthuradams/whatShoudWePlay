@@ -69,7 +69,7 @@ With those data points, it becomes possible to limit games based on available ti
 
 ### Maybe for the Initial Project
 #### Better Voting
-With a small set of players and a large number of games, ties are likely. 
+With a small set of players and a large number of games, ties are likely. Add some kind of approval voting -- each gamer picks three games, ranked first (three votes) to third (one vote). 
 
 #### Saved Sessions
 This is not "saved sessions" in the User Authentication sense, but bin the sense of "gaming sessions."  Gaming sessions can be created with lists of players who can vote on what to play. There's a field to add a brief description, so allow for a kind of gaming diary.
@@ -82,3 +82,5 @@ Users can only cast their own votes.
 #### The BGG API
 I'd love to access the API at BGG and pull data about the games, and, beyond that, even use player account data for players in my app. Besides time considerations, The Geek's API is XML based, so I'd need to learn how to access that. 
  
+#### A Meeting Planner for Gamers
+Ultimately, this could serve as the basis of a meeting planning for gamers. I'd call it "Herding Cats"
