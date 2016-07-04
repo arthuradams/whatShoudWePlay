@@ -27,13 +27,16 @@ games = Game.create([
                         min_players: 2,
                         max_players: 3,
                         length: 120,
-                        player_id: players[0].id
+                        player_id: players[0].id,
+                        url1: "https://boardgamegeek.com/boardgame/586/front"
                       },
                       { name: 'Through the Ages',
                         min_players: 2,
                         max_players: 4,
                         length: 360,
-                        player_id: players[0].id
+                        player_id: players[0].id,
+                        url1: "https://boardgamegeek.com/boardgame/182028/through-ages-new-story-civilization",
+                        url2: "http://czechgames.com/en/through-the-ages/"
                       },
                       { name: 'Settlers of Catan',
                         min_players: 2,
