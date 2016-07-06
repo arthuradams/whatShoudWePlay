@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 20160704021645) do
     t.integer  "max_players"
     t.integer  "length"
     t.string   "url1"
+    t.string   "url1_desc"
     t.string   "url2"
+    t.string   "url2_desc"
     t.integer  "player_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

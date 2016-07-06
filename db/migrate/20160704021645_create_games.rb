@@ -6,7 +6,9 @@ class CreateGames < ActiveRecord::Migration
       t.integer :max_players
       t.integer :length
       t.string  :url1
+      t.string  :url1_desc
       t.string  :url2
+      t.string  :url2_desc
       t.references :player, index: true, foreign_key: true
       t.timestamps null: false
     end

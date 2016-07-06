@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'players' => 'players#index'
+  # get 'players/new' => 'players#new'
+  # post 'players' => 'players#create'
+  resources :players
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -6,29 +6,33 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-players = Player.create([{ name: 'Arthur'},
-                        { name: 'Mark'},
-                        { name: 'Erik with a K'},
-                        { name: 'Charity'},
-                        { name: 'Joe'},
-                        { name: 'Redmond'},]
+players = Player.create([{ "name": 'Arthur'},
+                        { "name": 'Mark'},
+                        { "name": 'Erik with a K'},
+                        { "name": 'Charity'},
+                        { "name": 'Joe'},
+                        { "name": 'Redmond'},]
                         )
 
-games = Game.create([
-                      { name: 'Dominion',
+
+
+games = Game.create([{ name: 'Dominion',
                         min_players: 2,
                         max_players: 6,
                         length: 45,
                         player_id: players[0].id,
                         url1: 'http://boardgamegeek.com/boardgame/36218/dominion',
-                        url2: 'http://riograndegames.com/Game/278-Dominion'
+                        url1_desc: 'BGG Description',
+                        url2: 'http://riograndegames.com/Game/278-Dominion',
+                        url2_desc: 'Manufacturer Description',
                       },
                       { name: 'Up Front',
                         min_players: 2,
                         max_players: 3,
                         length: 120,
                         player_id: players[0].id,
-                        url1: "https://boardgamegeek.com/boardgame/586/front"
+                        url1: "https://boardgamegeek.com/boardgame/586/front",
+                        url1_desc: "BGG Link",
                       },
                       { name: 'Through the Ages',
                         min_players: 2,
@@ -36,7 +40,9 @@ games = Game.create([
                         length: 360,
                         player_id: players[0].id,
                         url1: "https://boardgamegeek.com/boardgame/182028/through-ages-new-story-civilization",
-                        url2: "http://czechgames.com/en/through-the-ages/"
+                        url2: "http://czechgames.com/en/through-the-ages/",
+                        url1_desc: "BGG Link",
+                        url2_desc: "Manufacturer Link"
                       },
                       { name: 'Settlers of Catan',
                         min_players: 2,
