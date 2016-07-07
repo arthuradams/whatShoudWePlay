@@ -10,6 +10,7 @@ class CreateGames < ActiveRecord::Migration
       t.string  :url2
       t.string  :url2_desc
       t.references :player, index: true, foreign_key: true
+      t.integer :votes, default: 0
       t.timestamps null: false
     end
   end

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20160704021645) do
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.string   "name",        null: false
+    t.string   "name",                    null: false
     t.integer  "min_players"
     t.integer  "max_players"
     t.integer  "length"
@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(version: 20160704021645) do
     t.string   "url2"
     t.string   "url2_desc"
     t.integer  "player_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "votes",       default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   add_index "games", ["player_id"], name: "index_games_on_player_id", using: :btree

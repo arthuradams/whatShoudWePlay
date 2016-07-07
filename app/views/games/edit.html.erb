@@ -1,0 +1,17 @@
+<h1>Edit Game</h1>
+<%= form_for(@game) do |f| %>
+  <div class="field">
+    <%= f.label :name, 'Name of Game' %> <%= f.text_field :name %><br/>
+    <%= f.label :min_players, 'Minimum Number of Players' %> <%= f.number_field :min_players %><br/>
+    <%= f.label :max_players, 'Maximum Number of Players' %> <%= f.number_field :max_players %><br/>
+    <%= f.label :length, 'Game Length (in minutes)' %> <%= f.number_field :length %><br/>
+    <%= f.label :url1, "URL of a web site related to the game" %> <%= f.url_field :url1 %>
+    <%= f.label :url1, "Description of the url" %> <%= f.text_field :url1_desc %><br/>
+    <%= f.label :url2, "URL of a web site related to the game" %> <%= f.url_field :url2 %>
+    <%= f.label :url2, "Description of the url" %> <%= f.text_field :url2_desc %><br/>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Edit" %>
+  </div>
+<% end %>
