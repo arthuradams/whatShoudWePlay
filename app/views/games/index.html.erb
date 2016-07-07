@@ -1,6 +1,8 @@
 <h1>Games</h1>
 <% @games.each do |game| %>
   <div class="game">
-    <p class="content"><%= link_to game.name, game %></p>
+    <p class="content"><%= link_to game.name, game %>
+      owned by 
+      <%= link_to game.player.name, game.player %></p>
   </div>
 <% end %>

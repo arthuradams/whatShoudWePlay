@@ -1,6 +1,5 @@
-<h2><%= link_to "Games", games_path %></h2>
 <div class="games">
-  <p class="content"><%= "Name: " + @game.name %></p>
+  <p class="content"><h1><%= @game.name %></p></h1>
   <p class="content"><%= "Minimum Players: " + @game.min_players.to_s if @game.min_players %></p>
   <p class="content"><%= "Maximum Players: " + @game.max_players.to_s if @game.max_players %></p>
   <p class="content"><%= 'Playing Time: ' + @game.length.to_s + " minutes" if @game.length %></p>
