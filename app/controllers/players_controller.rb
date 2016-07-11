@@ -15,16 +15,16 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new(player_params)
     if @player.save
-      redirect_to '/players'
+      redirect_to [@player]
     else
-      render 'new'
+      render action: "new"
     end
   end
 
   def destroy
     @player = Player.find(params[:id])
     @player.destroy
-    redirect_to '/players'
+    redirect_to players_path
   end
 
   def edit

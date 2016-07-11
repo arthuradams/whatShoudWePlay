@@ -6,7 +6,7 @@
   <p class="content"><%= link_to @game.url1_desc, @game.url1 if @game.url1_desc && @game.url1 %></p>
   <p class="content"><%= link_to @game.url2_desc, @game.url2 if @game.url2_desc && @game.url1 %></p>
 </div>
-<p><%= link_to "Edit Game", edit_game_path(@game) %></p>
-<p><%= link_to 'Delete Game', game_path(@game),
+<p><%= link_to "Edit Game", edit_player_game_path(@player, @game) %></p>
+<p><%= link_to 'Delete Game', [@player, @game],
             method: :delete,
             data: { confirm: 'Are you sure?' } %></p>

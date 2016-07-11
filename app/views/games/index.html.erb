@@ -1,8 +1,12 @@
 <h1>Games</h1>
 <% @games.each do |game| %>
   <div class="game">
-    <p class="content"><%= link_to game.name, game %>
-      owned by 
-      <%= link_to game.player.name, game.player %></p>
+    <p class="content"><%= link_to game.name, [@player, game] %>
+      owned by
+      <%= link_to @player.name, @player %>
+    </p>
+    <p><%= link_to 'Edit', edit_player_game_path( @player, game) %></p>
+    <p><%= link_to 'Delete', [@player, game], method: :delete %></p>
+
   </div>
 <% end %>

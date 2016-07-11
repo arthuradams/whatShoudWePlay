@@ -2,9 +2,10 @@
 <p><%= @player.name %></p>
 <% @player.games.each do |game| %>
   <div class="game">
-    <p class="content"><%= link_to game.name, game %></p>
+    <p class="content"><%= link_to game.name, [@player, game] %></p>
   </div>
 <% end %>
+<p><%= link_to "Add a game", new_player_game_path(@player) %>
 <p><%= link_to "Edit Player", edit_player_path(@player) %></p>
 <p><%= link_to 'Delete Player', player_path(@player),
             method: :delete,
