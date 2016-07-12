@@ -94,3 +94,39 @@ games = Game.create([{ name: 'Dominion',
                       },
 
                       ])
+
+votes = Vote.create([
+                          {
+                            game_id: games[0].id
+                          },
+                          {
+                            game_id: games[1].id
+                          },
+                          { 
+                            game_id: games[2].id
+                          },
+                          {
+                            game_id: games[3].id
+                          },
+                          {
+                            game_id: games[4].id
+                          },
+                          {
+                            game_id: games[5].id
+                          },
+                          {
+                            game_id: games[6].id
+                          },
+                          {
+                            game_id: games[7].id
+                          },
+                          {
+                            game_id: games[8].id
+                          },
+                          {
+                            game_id: games[9].id
+                          },
+                          {
+                            game_id: games[10].id
+                          },
+                        ])

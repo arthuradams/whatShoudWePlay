@@ -1,0 +1,10 @@
+<h1>Vote Totals</h1>
+<table>
+  <tr><th>Game</th><th>Vote Count</th></tr>
+    <% @votes.each do |vote| %>
+      <tr>
+        <td><%=  @games.find( vote.game_id ).name %></td>
+        <td><%=  vote.vote_count %></td>
+      </tr>
+    <% end %>
+</table>

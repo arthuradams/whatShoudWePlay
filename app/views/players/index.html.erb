@@ -1,7 +1,8 @@
 <h1>Our Players Are:</h1>
 <% @players.each do |player| %>
 <div class="player">
-  <p class="content"><%= link_to player.name, player %></p>
+  <p class="content"><%= link_to player.name, player %>
+    <%= link_to "Cast " + player.name + "'s Vote", vote_player_path(player) %></p>
 </div>
 <% end %>
 <%= link_to 'New Player',new_player_path %>

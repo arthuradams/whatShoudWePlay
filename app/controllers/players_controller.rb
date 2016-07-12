@@ -37,6 +37,12 @@ class PlayersController < ApplicationController
    redirect_to player_path(@player)
   end
 
+  def vote
+    @votes = Vote.all
+    @games = Game.all
+    @player = Player.find(params[:id]) 
+  end
+
   private
     def player_params
       params.require(:player).permit(:name)

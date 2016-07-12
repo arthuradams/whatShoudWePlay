@@ -27,7 +27,7 @@ class GamesController < ApplicationController
   def destroy
     @game = @player.games.find(params[:id])
     @game.destroy
-    redirect_to '/players/'
+    redirect_to [@player]
   end
 
   def new
@@ -37,6 +37,9 @@ class GamesController < ApplicationController
   def create
     @game = @player.games.new(game_params)
     if @game.save
+      @vote = Vote.new
+      @vote.game_id = @game.id
+      @vote.save
       redirect_to @player
     else
       render action: "new"
@@ -44,8 +47,10 @@ class GamesController < ApplicationController
   end
 
   def add_vote
-    @game = Game.find(params[:id])
-    @game.update(score += 1)
+    @vote = Vote.find(params[:id])
+    @vote.vote_count += 1
+    @vote.save
+    redirect_to root_path
   end
 
   private

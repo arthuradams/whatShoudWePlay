@@ -1,0 +1,7 @@
+<h1><%= "Cast " + @player.name + "'s Vote"%></h1>
+<% @votes.each do |vote| %>
+<ul>
+  <li><%= link_to "Vote for " + @games.find( vote.game_id ).name,
+  add_vote_player_game_path(@player, @games.find( vote.game_id )), method: :put %></li>
+</ul>
+<% end %>
