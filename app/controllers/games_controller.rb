@@ -50,7 +50,7 @@ class GamesController < ApplicationController
     @vote = Vote.find(params[:id])
     @vote.vote_count += 1
     @vote.save
-    redirect_to root_path
+    redirect_to votes_path
   end
 
   private
