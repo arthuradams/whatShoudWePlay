@@ -1,3 +1,11 @@
+# Introduction
+
+This is what I have for this project. It is woefully inadequate and I'm not proud of it.
+
+[It's on herokuapp.](https://whatshouldweplay.herokuapp.com/)
+
+The core functionality is there -- there's a list of players, and they games they own. You can add new games to a player, add new players, and see the vote totals. There's a few simple things to add, but I need to stop working on it for now
+
 #What Should We Play
 
 ## Picture a Panel at a Gaming Convention
