@@ -37,10 +37,11 @@ class PlayersController < ApplicationController
    redirect_to player_path(@player)
   end
 
+  # AM: Do you use this action at all in your app?
   def vote
     @votes = Vote.all
     @games = Game.all
-    @player = Player.find(params[:id]) 
+    @player = Player.find(params[:id])
   end
 
   private

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'vote'
     end
     resources :games do
+      # AM: +1
       member do
         put 'add_vote'
       end

@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160711015514) do
     t.datetime "updated_at", null: false
   end
 
+  # AM: My gut says to make this an attribute on games. It only has one attribute (an integer) and belongs to a game. Unless you plan on building this model out further, separating votes out into a separate model doesn't seem to do much benefit. 
   create_table "votes", force: :cascade do |t|
     t.integer  "vote_count", default: 0
     t.integer  "game_id"
