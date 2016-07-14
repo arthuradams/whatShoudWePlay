@@ -95,6 +95,7 @@ games = Game.create([{ name: 'Dominion',
 
                       ])
 
+# AM: You could also write `game: games[0]`. A bit more readable.
 votes = Vote.create([
                           {
                             game_id: games[0].id
@@ -102,7 +103,7 @@ votes = Vote.create([
                           {
                             game_id: games[1].id
                           },
-                          { 
+                          {
                             game_id: games[2].id
                           },
                           {
